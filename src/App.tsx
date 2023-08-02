@@ -1,6 +1,6 @@
-const App: React.FC = () => {
+const App =(): JSX.Element => {
   return (
-    <div>App</div>
+    <h1>App</h1>
   )
 }
 

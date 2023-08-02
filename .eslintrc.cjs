@@ -5,8 +5,8 @@ module.exports = {
   },
   extends: [
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:react-hooks/recommended',
+    'standard-with-typescript'
+    
   ],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -15,6 +15,7 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
-    "react/react-in-jsx-scope":"off"
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/restrict-plus-operands": ["error", { "allowString": true }],
   },
 };
