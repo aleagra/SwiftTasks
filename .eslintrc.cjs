@@ -15,6 +15,7 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
+    "react/props-types":"off",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/restrict-plus-operands": ["error", { "allowString": true }],
   },
