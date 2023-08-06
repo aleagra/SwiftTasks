@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sass": "sass --watch src/styles/app.scss src/styles/App.css" 
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.0.4",
@@ -23,6 +24,7 @@
     "eslint-config-standard-with-typescript": "^37.0.0",
     "eslint-plugin-react": "^7.33.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "sass": "^1.64.2",
     "typescript": "^5.0.2",
     "vite": "^4.4.8"
   }
