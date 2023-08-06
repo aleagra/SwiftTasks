@@ -19,6 +19,16 @@ const App: React.FC = () => {
       title: "tarea 3",
       completed: false,
     },
+    {
+      id: "4",
+      title: "tarea 4",
+      completed: false,
+    },
+    {
+      id: "5",
+      title: "tarea 5",
+      completed: false,
+    },
   ];
 
   const [todos, setTodos] = useState(todosList);
@@ -46,7 +56,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="">
+    <div className="container">
       <Todos
         todos={todos}
         handleRemove={handleRemove}

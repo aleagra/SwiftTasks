@@ -1,5 +1,5 @@
 import { TodoId, type Todo as TodoType } from "../types";
-import styles from "../styles/components/_variables.module.scss";
+import styles from "../styles/components/_todo.module.scss";
 
 interface Props extends TodoType {
   handleRemove: ({ id }: TodoId) => void;
@@ -17,7 +17,7 @@ export const Todo: React.FC<Props> = ({
   completedTodo,
 }) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.todo}>
       <input
         type="checkbox"
         checked={completed}

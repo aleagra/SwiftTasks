@@ -5,6 +5,7 @@ import {
   TodoId,
 } from "../types";
 import Todo from "./Todo";
+import styles from "../styles/components/_todos.module.scss";
 
 interface Props {
   todos: ListOfTodos;
@@ -21,7 +22,7 @@ export const Todos: React.FC<Props> = ({
   completedTodo,
 }) => {
   return (
-    <ul>
+    <ul className={styles.todos}>
       {todos.map((todo) => (
         <li className={`${todo.completed} ? : `} key={todo.id}>
           <Todo
