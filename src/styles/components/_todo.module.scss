@@ -1,14 +1,14 @@
 .todo {
-  width: fit;
+  background-color: transparent;
   height: 100px;
   display: flex;
   align-items: center;
   button {
     width: 20px;
-    background-color: red;
     height: 20px;
   }
   label {
+    background-color: transparent;
     font-weight: 500;
     padding-left: 10px;
     white-space: nowrap;

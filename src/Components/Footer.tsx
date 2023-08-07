@@ -20,7 +20,7 @@ export const Footer: React.FC<Props> = ({
   return (
     <footer className={styles.footer}>
       <span className={styles.count}>
-        <strong className={styles.number}>{activeCount}</strong>tareas
+        <strong className={styles.number}>{activeCount}</strong>Tareas
         pendientes
       </span>
       <Filters

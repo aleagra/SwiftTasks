@@ -2,11 +2,10 @@
 
 .footer {
   display: flex;
-  justify-content: center;
-  margin: 2%;
-
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 1.4rem;
   .count {
-    padding-left: 2rem;
     padding-right: 2rem;
   }
   .number {
@@ -16,7 +15,10 @@
   .clear {
     color: white;
     background-color: $color-verde;
-    margin-left: 2rem;
     margin-right: 2rem;
+    margin-left: 2rem;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 10px;
   }
 }

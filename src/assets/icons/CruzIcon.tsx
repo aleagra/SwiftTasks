@@ -1,3 +1,4 @@
+import styles from "../../styles/components/_todos.module.scss";
 const CruzIcon: React.FC = () => {
   return (
     <svg
@@ -6,6 +7,7 @@ const CruzIcon: React.FC = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
+      className={styles.icon}
     >
       <path
         strokeLinecap="round"

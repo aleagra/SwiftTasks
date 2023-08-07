@@ -24,7 +24,7 @@ export const Todos: React.FC<Props> = ({
   return (
     <ul className={styles.todos}>
       {todos.map((todo) => (
-        <li className={`${todo.completed} ? : `} key={todo.id}>
+        <li className={styles.todo} key={todo.id}>
           <Todo
             key={todo.id}
             id={todo.id}

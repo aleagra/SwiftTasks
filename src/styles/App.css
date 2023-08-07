@@ -27,41 +27,58 @@ button {
 }
 
 .main {
-  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .todo {
-  width: fit;
+  background-color: transparent;
   height: 100px;
   display: flex;
   align-items: center;
 }
 .todo button {
   width: 20px;
-  background-color: red;
   height: 20px;
 }
 .todo label {
+  background-color: transparent;
   font-weight: 500;
   padding-left: 10px;
   white-space: nowrap;
 }
 
 .todos {
-  justify-content: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18%, 18%));
+  grid-gap: 2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.todos li {
+  background-color: white;
+  border-radius: 5px;
+  height: 200px;
   display: flex;
-  gap: 3rem;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  background-color: white;
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  width: 100%;
 }
 .header img {
   margin: auto;
@@ -70,21 +87,25 @@ button {
 }
 
 .createTodo {
-  width: 500px;
-  border-radius: 20px;
+  width: 100%;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
   margin: auto;
   height: 40px;
   padding-left: 2%;
   padding-right: 2%;
+  outline: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .footer {
   display: flex;
-  justify-content: center;
-  margin: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 1.4rem;
 }
 .footer .count {
-  padding-left: 2rem;
   padding-right: 2rem;
 }
 .footer .number {
@@ -94,8 +115,11 @@ button {
 .footer .clear {
   color: white;
   background-color: #03c988;
-  margin-left: 2rem;
   margin-right: 2rem;
+  margin-left: 2rem;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 10px;
 }
 
 .filter {

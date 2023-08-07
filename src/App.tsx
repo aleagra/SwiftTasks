@@ -93,17 +93,17 @@ const App: React.FC = () => {
   return (
     <div className={styles.main}>
       <Header saveTodo={handleSave} />
-      <Todos
-        todos={filterTodos}
-        handleRemove={handleRemove}
-        completedTodo={handleCompleted}
-      />
       <Footer
         onClearCompleted={handleRemoveCompleted}
         completedCount={completedCount}
         filterSelected={filterSelected}
         activeCount={todos.filter((todo) => !todo.completed).length}
         handleFilterChange={handleFilterChange}
+      />
+      <Todos
+        todos={filterTodos}
+        handleRemove={handleRemove}
+        completedTodo={handleCompleted}
       />
     </div>
   );
