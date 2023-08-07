@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Todos } from "./Components/Todos";
-import { FilterValue, Todo, TodoId } from "./types";
+import { FilterValue, Todo, TodoId, TodoTitle } from "./types";
 import { TODO_FILTERS } from "./const";
 import { Footer } from "./Components/Footer";
+import { Header } from "./Components/Header";
 
 const App: React.FC = () => {
   const todosList = [
@@ -77,8 +78,20 @@ const App: React.FC = () => {
     const newTodos = todos.filter((todo) => !todo.completed);
     setTodos(newTodos);
   };
+
+  const handleSave = (title: string): void => {
+    const newTodo = {
+      id: crypto.randomUUID(),
+      title,
+      completed: false,
+    };
+
+    setTodos([...todos, newTodo]);
+  };
+
   return (
     <div className="container">
+      <Header saveTodo={handleSave} />
       <Todos
         todos={filterTodos}
         handleRemove={handleRemove}
