@@ -1,35 +1,36 @@
 import { useState } from "react";
 import { Todos } from "./Components/Todos";
-import { FilterValue, Todo, TodoId, TodoTitle } from "./types";
+import { FilterValue, Todo, TodoId } from "./types";
 import { TODO_FILTERS } from "./const";
 import { Footer } from "./Components/Footer";
 import { Header } from "./Components/Header";
+import styles from "./styles/components/_main.module.scss";
 
 const App: React.FC = () => {
   const todosList = [
     {
       id: "1",
-      title: "tarea 1",
+      title: "Pasear al perro",
       completed: false,
     },
     {
       id: "2",
-      title: "tarea 2",
+      title: "Parcial",
       completed: false,
     },
     {
       id: "3",
-      title: "tarea 3",
+      title: "Sacar turno",
       completed: false,
     },
     {
       id: "4",
-      title: "tarea 4",
+      title: "Terminar Frontend",
       completed: false,
     },
     {
       id: "5",
-      title: "tarea 5",
+      title: "Hostear app",
       completed: false,
     },
   ];
@@ -90,7 +91,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="container">
+    <div className={styles.main}>
       <Header saveTodo={handleSave} />
       <Todos
         todos={filterTodos}

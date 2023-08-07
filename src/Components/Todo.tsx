@@ -1,5 +1,6 @@
 import { TodoId, type Todo as TodoType } from "../types";
 import styles from "../styles/components/_todo.module.scss";
+import CruzIcon from "../assets/icons/CruzIcon";
 
 interface Props extends TodoType {
   handleRemove: ({ id }: TodoId) => void;
@@ -31,7 +32,9 @@ export const Todo: React.FC<Props> = ({
         onClick={() => {
           handleRemove({ id });
         }}
-      ></button>
+      >
+        <CruzIcon />
+      </button>
     </div>
   );
 };

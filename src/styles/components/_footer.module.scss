@@ -1,0 +1,22 @@
+@import "../base/variables";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+
+  .count {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .number {
+    padding-right: 5px;
+    color: $color-verde;
+  }
+  .clear {
+    color: white;
+    background-color: $color-verde;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}

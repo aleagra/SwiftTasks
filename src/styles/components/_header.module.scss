@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  img {
+    margin: auto;
+    width: 20rem;
+    height: auto;
+  }
+}

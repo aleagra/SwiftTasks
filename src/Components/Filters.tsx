@@ -1,6 +1,6 @@
 import { FILTERS_BUTTONS } from "../const";
 import { FilterValue } from "../types";
-
+import styles from "../styles/components/_filters.module.scss";
 interface Props {
   filterSelected: FilterValue;
   onFilterChange: (filter: FilterValue) => void;
@@ -11,7 +11,7 @@ export const Filters: React.FC<Props> = ({
   onFilterChange,
 }) => {
   return (
-    <ul className="filters">
+    <ul className={styles.filter}>
       {Object.entries(FILTERS_BUTTONS).map(([key, { href, literal }]) => {
         const isSelected = key === filterSelected;
         const className = isSelected ? "selected" : "";

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,100;1,800&display=swap");
 * {
   font-family: "Poppins", sans-serif;
+  background-color: #eff1f2;
 }
 
 * {
@@ -15,10 +16,27 @@ li {
 
 a {
   text-decoration: none;
+  color: black;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .todo {
-  width: 100px;
+  width: fit;
   height: 100px;
   display: flex;
   align-items: center;
@@ -28,11 +46,61 @@ a {
   background-color: red;
   height: 20px;
 }
+.todo label {
+  font-weight: 500;
+  padding-left: 10px;
+  white-space: nowrap;
+}
 
 .todos {
   justify-content: center;
   display: flex;
   gap: 3rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+.header img {
+  margin: auto;
+  width: 20rem;
+  height: auto;
+}
+
+.createTodo {
+  width: 500px;
+  border-radius: 20px;
+  margin: auto;
+  height: 40px;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+}
+.footer .count {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.footer .number {
+  padding-right: 5px;
+  color: #03c988;
+}
+.footer .clear {
+  color: white;
+  background-color: #03c988;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.filter {
+  display: flex;
+  gap: 2rem;
 }
 
 /*# sourceMappingURL=App.css.map */

@@ -1,5 +1,13 @@
-@import './base/base';
-@import './base/resets';
-@import './components/todo.module';
-@import './components/todos.module'
-    
+@import "./base/base";
+@import "./base/resets";
+@import "./base/variables";
+@import "./components/main.module";
+
+@import "./components/todo.module";
+@import "./components/todos.module";
+
+@import "./components/header.module";
+@import "./components/createTodo.module";
+
+@import "./components/footer.module";
+@import "./components/filters.module";

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "../styles/components/_createTodo.module.scss";
 
 interface Props {
   saveTodo: (title: string) => void;
@@ -16,7 +17,7 @@ export const CreateTodo: React.FC<Props> = ({ saveTodo }) => {
 
   return (
     <input
-      className="new-todo"
+      className={styles.createTodo}
       value={inputValue}
       onChange={(e) => {
         setInputValue(e.target.value);

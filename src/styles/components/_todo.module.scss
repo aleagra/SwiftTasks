@@ -1,11 +1,16 @@
-.todo{
-   width: 100px;
-   height: 100px;
-   display: flex;
-   align-items: center;
-    button{
-        width: 20px;
-        background-color: red;
-        height: 20px;
-    }
+.todo {
+  width: fit;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  button {
+    width: 20px;
+    background-color: red;
+    height: 20px;
+  }
+  label {
+    font-weight: 500;
+    padding-left: 10px;
+    white-space: nowrap;
+  }
 }
