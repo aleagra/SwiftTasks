@@ -14,7 +14,7 @@ export const Filters: React.FC<Props> = ({
     <ul className={styles.filter}>
       {Object.entries(FILTERS_BUTTONS).map(([key, { href, literal }]) => {
         const isSelected = key === filterSelected;
-        const className = isSelected ? "selected" : "";
+        const className = isSelected ? `${styles.selected}` : "";
         return (
           <li key={key}>
             <a

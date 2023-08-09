@@ -1,4 +1,10 @@
-.filter{
-    display: flex;
-    gap: 2rem;
+@import "../base/variables";
+
+.filter {
+  display: flex;
+  gap: 2rem;
+}
+.selected {
+  color: $color-verde;
+  font-weight: 600;
 }

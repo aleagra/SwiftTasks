@@ -16,6 +16,6 @@ export const fetchTodos = async (): Promise<Todo[]> => {
   }
 
   const data = await res.json();
-  const todos = data.record.todos as Todo[]; // Acceder al array "todos" dentro de "record"
+  const todos = data.record.todos as Todo[]; 
   return todos;
 };

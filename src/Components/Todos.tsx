@@ -1,9 +1,4 @@
-import {
-  Todo as TodoType,
-  TodoTitle,
-  type ListOfTodos,
-  TodoId,
-} from "../types";
+import { Todo as TodoType, type ListOfTodos, TodoId } from "../types";
 import Todo from "./Todo";
 import styles from "../styles/components/_todos.module.scss";
 

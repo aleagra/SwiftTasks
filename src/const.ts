@@ -10,7 +10,7 @@ export const FILTERS_BUTTONS = {
       href: `/?filter=${TODO_FILTERS.ALL}`,
     },
     [TODO_FILTERS.ACTIVE]: {
-      literal: "Activos",
+      literal: "En progreso",
       href: `/?filter=${TODO_FILTERS.ACTIVE}`,
     },
     [TODO_FILTERS.COMPLETED]: {

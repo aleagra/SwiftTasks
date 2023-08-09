@@ -1,13 +1,14 @@
 .todo {
+  padding: 7%;
   background-color: transparent;
   height: 100px;
-  display: flex;
-  align-items: center;
+  width: 100%;
   button {
     width: 20px;
     height: 20px;
   }
   label {
+    font-size: 1.5rem;
     background-color: transparent;
     font-weight: 500;
     padding-left: 10px;
