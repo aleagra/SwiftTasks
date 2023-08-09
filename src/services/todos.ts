@@ -8,12 +8,14 @@ interface Todo {
 }
 
 export const fetchTodos = async (): Promise<Todo[]> => {
-  const res = await fetch(API_URL)
+  const res = await fetch(API_URL);
+
   if (!res.ok) {
-    console.error('Error fetching todos')
-    return []
+    console.error('Error fetching todos');
+    return [];
   }
 
-  const { record: todos } = await res.json() as { record: Todo[] }
-  return todos
-}
+  const data = await res.json();
+  const todos = data.record.todos as Todo[]; // Acceder al array "todos" dentro de "record"
+  return todos;
+};
