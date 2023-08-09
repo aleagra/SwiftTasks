@@ -110,9 +110,11 @@ button {
 
 .footer {
   display: flex;
+  align-items: center;
   margin-top: 2%;
   margin-bottom: 2%;
   font-size: 1.4rem;
+  font-weight: 500;
 }
 .footer .count {
   padding-right: 2rem;
@@ -122,13 +124,13 @@ button {
   color: #03c988;
 }
 .footer .clear {
+  font-size: 1rem;
   color: white;
   background-color: #03c988;
   margin-right: 2rem;
   margin-left: 2rem;
-  padding-left: 8px;
-  padding-right: 8px;
-  border-radius: 10px;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  border-radius: 25px;
 }
 
 .filter {
@@ -139,6 +141,10 @@ button {
 .selected {
   color: #03c988;
   font-weight: 600;
+}
+
+a {
+  padding: 20px;
 }
 
 /*# sourceMappingURL=App.css.map */

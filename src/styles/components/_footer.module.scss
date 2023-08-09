@@ -2,9 +2,11 @@
 
 .footer {
   display: flex;
+  align-items: center;
   margin-top: 2%;
   margin-bottom: 2%;
   font-size: 1.4rem;
+  font-weight: 500;
   .count {
     padding-right: 2rem;
   }
@@ -13,12 +15,12 @@
     color: $color-verde;
   }
   .clear {
+    font-size: 1rem;
     color: white;
     background-color: $color-verde;
     margin-right: 2rem;
     margin-left: 2rem;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-radius: 10px;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    border-radius: 25px;
   }
 }
