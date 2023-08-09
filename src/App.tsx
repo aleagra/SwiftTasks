@@ -76,7 +76,8 @@ const App: React.FC = () => {
       title,
       completed: false,
     };
-    const updatedTodos = [...todos, newTodo];
+
+    const updatedTodos = [newTodo, ...todos];
     setTodos(updatedTodos);
     await updateDatabase(updatedTodos);
   };

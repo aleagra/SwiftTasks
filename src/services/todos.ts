@@ -17,5 +17,5 @@ export const fetchTodos = async (): Promise<Todo[]> => {
 
   const data = await res.json();
   const todos = data.record.todos as Todo[]; 
-  return todos;
+  return todos.sort((a, b) => b.order - a.order);
 };
