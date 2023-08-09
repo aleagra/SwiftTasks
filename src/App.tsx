@@ -25,9 +25,37 @@ const App: React.FC = () => {
       });
   }, []);
 
-  const handleRemove = ({ id }: TodoId): void => {
+  const handleRemove = async ({ id }: TodoId): Promise<void> => {
     const newTodos = todos.filter((todo) => todo.id !== id);
     setTodos(newTodos);
+
+    const dataToUpdate = {
+      todos: newTodos.map((todo) => ({
+        id: todo.id,
+        title: todo.title,
+        completed: todo.completed,
+      })),
+    };
+
+    const requestOptions = {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Master-Key": API_KEY,
+      },
+      body: JSON.stringify(dataToUpdate),
+    };
+
+    try {
+      const response = await fetch(API_URL, requestOptions);
+      if (!response.ok) {
+        console.error("Error updating todos in the database");
+      } else {
+        console.log("Todo removed successfully");
+      }
+    } catch (error) {
+      console.error("Error while making the request:", error);
+    }
   };
   const handleCompleted = ({
     id,
