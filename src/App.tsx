@@ -69,12 +69,16 @@ const App: React.FC = () => {
     setTodos(newTodos);
     await updateDatabase(newTodos);
   };
+  const currentDate = new Date().toLocaleDateString();
+  const currentTime = new Date().toLocaleTimeString();
 
+  const combinedDateTime = currentDate + " " + currentTime;
   const handleSave = async (title: string): Promise<void> => {
     const newTodo = {
       id: crypto.randomUUID(),
       title,
       completed: false,
+      date: combinedDateTime,
     };
 
     const updatedTodos = [newTodo, ...todos];

@@ -9,6 +9,7 @@ export const updateDatabase = async (updatedTodos: Todo[]): Promise<void> => {
         id: todo.id,
         title: todo.title,
         completed: todo.completed,
+        date:todo.date,
       })),
     };
   

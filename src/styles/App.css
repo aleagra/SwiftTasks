@@ -118,6 +118,7 @@ button {
 }
 .footer .count {
   padding-right: 2rem;
+  font-weight: 600;
 }
 .footer .number {
   padding-right: 5px;

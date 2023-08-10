@@ -13,6 +13,7 @@ interface Props extends TodoType {
 export const Todo: React.FC<Props> = ({
   id,
   title,
+  date,
   completed,
   handleRemove,
   completedTodo,
@@ -27,6 +28,7 @@ export const Todo: React.FC<Props> = ({
         }}
       />
       <label htmlFor="">{title}</label>
+      <p>{date}</p>
       <button
         className="destroy"
         onClick={() => {

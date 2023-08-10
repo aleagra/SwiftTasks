@@ -24,6 +24,7 @@ export const Todos: React.FC<Props> = ({
             key={todo.id}
             id={todo.id}
             title={todo.title}
+            date={todo.date}
             completed={todo.completed}
             completedTodo={completedTodo}
             handleRemove={handleRemove}

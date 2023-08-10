@@ -7,9 +7,10 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "sass": "sass --watch src/styles/app.scss src/styles/App.css" 
+    "sass": "sass --watch src/styles/app.scss src/styles/App.css"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.0.9",
     "@vitejs/plugin-react": "^4.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
