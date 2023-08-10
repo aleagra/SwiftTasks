@@ -3,6 +3,9 @@
   background-color: transparent;
   height: 100px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   button {
     width: 20px;
     height: 20px;
@@ -11,10 +14,14 @@
     font-size: 1.5rem;
     background-color: transparent;
     font-weight: 500;
-    padding-left: 10px;
     white-space: nowrap;
   }
   p {
     background-color: white;
+  }
+  input {
+    width: fit-content;
+    display: flex;
+    justify-content: left;
   }
 }
