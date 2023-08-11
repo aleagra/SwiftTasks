@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,100;1,800&display=swap");
 * {
   font-family: "Poppins", sans-serif;
+}
+
+body {
   background-color: #f4f4f4;
 }
 
@@ -34,14 +37,24 @@ button {
   margin-right: 10%;
 }
 
+.loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .todo {
   padding: 7%;
   background-color: transparent;
-  height: 100px;
   width: 100%;
+  padding: 10px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: background-color 0.3s, height 0.3s;
 }
 .todo button {
   width: 20px;
@@ -53,13 +66,20 @@ button {
   font-weight: 500;
   white-space: nowrap;
 }
-.todo p {
-  background-color: white;
-}
 .todo input {
   width: fit-content;
   display: flex;
   justify-content: left;
+}
+
+.completedTodo {
+  background-color: #01934d;
+  height: 100%;
+  border-radius: 20px;
+  transition: background-color 0.3s, height 0.3s;
+}
+.completedTodo label {
+  text-decoration: line-through;
 }
 
 .todos {
@@ -72,11 +92,10 @@ button {
   margin: 0 auto;
 }
 .todos .todo {
-  position: relative;
   background-color: white;
-  border-radius: 20px;
-  padding: 10px;
+  position: relative;
   height: 200px;
+  border-radius: 20px;
   display: flex;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -84,7 +103,6 @@ button {
 .icon {
   width: 25px;
   height: 25px;
-  background-color: white;
   position: absolute;
   top: 10px;
   right: 15px;
@@ -158,7 +176,7 @@ a {
 
 .dropdown {
   width: 100px;
-  background-color: white;
+  background-color: transparent;
   position: absolute;
   top: 0;
   right: 0;
@@ -168,6 +186,10 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.toggle svg {
+  background-color: transparent;
 }
 
 /*# sourceMappingURL=App.css.map */

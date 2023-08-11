@@ -10,6 +10,7 @@ interface Props extends TodoType {
     completed,
   }: Pick<TodoType, "id" | "completed">) => void;
 }
+
 const options = [
   { value: "option1", label: "Opción 1" },
   { value: "option2", label: "Opción 2" },
@@ -28,8 +29,10 @@ export const Todo: React.FC<Props> = ({
   handleRemove,
   completedTodo,
 }) => {
+  const todoClasses = `${styles.todo} ${completed ? styles.completedTodo : ""}`;
+
   return (
-    <div className={styles.todo}>
+    <div className={todoClasses}>
       <input
         type="checkbox"
         checked={completed}

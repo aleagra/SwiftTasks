@@ -1,11 +1,13 @@
 .todo {
   padding: 7%;
   background-color: transparent;
-  height: 100px;
   width: 100%;
+  padding: 10px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: background-color 0.3s, height 0.3s;
   button {
     width: 20px;
     height: 20px;
@@ -16,12 +18,19 @@
     font-weight: 500;
     white-space: nowrap;
   }
-  p {
-    background-color: white;
-  }
   input {
     width: fit-content;
     display: flex;
     justify-content: left;
+  }
+}
+.completedTodo {
+  background-color: #01934d;
+  height: 100%;
+  border-radius: 20px;
+  transition: background-color 0.3s, height 0.3s;
+
+  label {
+    text-decoration: line-through;
   }
 }
