@@ -15,11 +15,13 @@ const App: React.FC = () => {
   const [filterSelected, setFilterSelected] = useState<FilterValue>(
     TODO_FILTERS.ALL
   );
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetchTodos()
       .then((todos) => {
         setTodos(todos);
+        setIsLoading(false);
       })
       .catch((err) => {
         console.error(err);
@@ -88,19 +90,27 @@ const App: React.FC = () => {
 
   return (
     <div className={styles.main}>
-      <Header saveTodo={handleSave} />
-      <Footer
-        onClearCompleted={handleRemoveCompleted}
-        completedCount={completedCount}
-        filterSelected={filterSelected}
-        activeCount={todos.filter((todo) => !todo.completed).length}
-        handleFilterChange={handleFilterChange}
-      />
-      <Todos
-        todos={filterTodos}
-        handleRemove={handleRemove}
-        completedTodo={handleCompleted}
-      />
+      {isLoading ? (
+        <div className={styles.loading}>
+          <img src="./tasks.png" alt="" />
+        </div> // Indicador de carga mientras isLoading es true
+      ) : (
+        <>
+          <Header saveTodo={handleSave} />
+          <Footer
+            onClearCompleted={handleRemoveCompleted}
+            completedCount={completedCount}
+            filterSelected={filterSelected}
+            activeCount={todos.filter((todo) => !todo.completed).length}
+            handleFilterChange={handleFilterChange}
+          />
+          <Todos
+            todos={filterTodos}
+            handleRemove={handleRemove}
+            completedTodo={handleCompleted}
+          />
+        </>
+      )}
     </div>
   );
 };
