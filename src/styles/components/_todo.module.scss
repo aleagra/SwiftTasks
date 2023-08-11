@@ -1,31 +1,27 @@
+@import "../base/variables";
 .todo {
   padding: 7%;
   background-color: transparent;
   width: 100%;
-  padding: 10px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   transition: background-color 0.3s, height 0.3s;
   button {
     width: 20px;
     height: 20px;
   }
   label {
+    margin-top: 20px;
     font-size: 1.5rem;
     background-color: transparent;
     font-weight: 500;
     white-space: nowrap;
   }
-  input {
-    width: fit-content;
-    display: flex;
-    justify-content: left;
-  }
 }
 .completedTodo {
-  background-color: #01934d;
+  background-color: $color-verde;
   height: 100%;
   border-radius: 20px;
   transition: background-color 0.3s, height 0.3s;
@@ -33,4 +29,29 @@
   label {
     text-decoration: line-through;
   }
+}
+.customCheckbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #bfbfc0;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 0;
+  &:focus {
+    outline: 0;
+  }
+  &:checked {
+    transition: background-color 0.3s, height 0.3s;
+    background-color: $color-verde;
+    border-color: $color-verde;
+  }
+}
+.dates {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }

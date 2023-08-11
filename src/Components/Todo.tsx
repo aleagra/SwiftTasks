@@ -33,23 +33,28 @@ export const Todo: React.FC<Props> = ({
 
   return (
     <div className={todoClasses}>
-      <input
-        type="checkbox"
-        checked={completed}
-        onChange={(event) => {
-          completedTodo({ id, completed: event.target.checked });
-        }}
-      />
       <label htmlFor="">{title}</label>
-      <p>{date}</p>
-      <button
+      <div className={styles.dates}>
+        <p>{date}</p>
+        <input
+          type="checkbox"
+          className={styles.customCheckbox}
+          checked={completed}
+          onChange={(event) => {
+            completedTodo({ id, completed: event.target.checked });
+          }}
+        />
+      </div>
+
+      {/* <button
         className="destroy"
         onClick={() => {
           handleRemove({ id });
         }}
       >
         <ElipsisIcon />
-      </button>
+      </button> */}
+
       <Dropdown options={options} onSelect={handleOptionSelect} />
     </div>
   );
