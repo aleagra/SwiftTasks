@@ -1,29 +1,31 @@
 @import "../base/variables";
 .todo {
-  padding: 7%;
+  padding: 5%;
   background-color: transparent;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   transition: background-color 0.3s, height 0.3s;
   button {
     width: 20px;
     height: 20px;
   }
   label {
-    margin-top: 20px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     background-color: transparent;
-    font-weight: 500;
+    font-weight: 600;
     white-space: nowrap;
+  }
+  h2 {
+    font-size: 0.9rem;
+    color: black;
+    opacity: 40%;
   }
 }
 .completedTodo {
-  background-color: $color-verde;
+  background-color: rgba(3, 201, 136, 0.3);
   height: 100%;
-  border-radius: 20px;
+  border-radius: 10px;
   transition: background-color 0.3s, height 0.3s;
 
   label {
@@ -31,27 +33,67 @@
   }
 }
 .customCheckbox {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 2px solid #bfbfc0;
-  background-color: transparent;
-  cursor: pointer;
-  margin: 0;
-  &:focus {
-    outline: 0;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  position: relative;
+
+  .checkboxInput {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(3, 201, 136, 0.3);
+    cursor: pointer;
+    margin: 5px auto 0;
+    &:focus {
+      outline: 0;
+    }
+
+    &:checked {
+      transition: background-color 0.3s, height 0.3s;
+      background-color: $color-verde;
+      border-color: $color-verde;
+    }
   }
-  &:checked {
-    transition: background-color 0.3s, height 0.3s;
-    background-color: $color-verde;
-    border-color: $color-verde;
+
+  .checkboxIcon {
+    margin: auto;
+    width: 24px;
+    position: absolute;
+    left: 12px;
+    top: 14px;
+    height: 24px;
+    stroke: $color-verde;
+    transition: fill 0.3s;
+  }
+
+  .checkboxInput:checked ~ .checkboxIcon {
+    stroke: white;
   }
 }
 .dates {
+  margin-top: 20px;
+  color: $color-verde;
+  font-weight: 600;
   align-items: center;
   display: flex;
   justify-content: space-between;
+}
+.bar {
+  width: 5px;
+  border-radius: 20px;
+  background-color: $color-verde;
+  height: 100%;
+}
+.check {
+  width: 30%;
+  display: flex;
+}
+.containerTodo {
+  display: flex;
+  flex-direction: column;
 }

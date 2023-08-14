@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #f4f4f4;
+  background-color: #f5f6fa;
 }
 
 * {
@@ -46,13 +46,11 @@ button {
 }
 
 .todo {
-  padding: 7%;
+  padding: 5%;
   background-color: transparent;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   transition: background-color 0.3s, height 0.3s;
 }
 .todo button {
@@ -60,17 +58,21 @@ button {
   height: 20px;
 }
 .todo label {
-  margin-top: 20px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   background-color: transparent;
-  font-weight: 500;
+  font-weight: 600;
   white-space: nowrap;
+}
+.todo h2 {
+  font-size: 0.9rem;
+  color: black;
+  opacity: 40%;
 }
 
 .completedTodo {
-  background-color: #03c988;
+  background-color: rgba(3, 201, 136, 0.3);
   height: 100%;
-  border-radius: 20px;
+  border-radius: 10px;
   transition: background-color 0.3s, height 0.3s;
 }
 .completedTodo label {
@@ -78,30 +80,69 @@ button {
 }
 
 .customCheckbox {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  position: relative;
+}
+.customCheckbox .checkboxInput {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  border: 2px solid #bfbfc0;
-  background-color: transparent;
+  background-color: rgba(3, 201, 136, 0.3);
   cursor: pointer;
-  margin: 0;
+  margin: 5px auto 0;
 }
-.customCheckbox:focus {
+.customCheckbox .checkboxInput:focus {
   outline: 0;
 }
-.customCheckbox:checked {
+.customCheckbox .checkboxInput:checked {
   transition: background-color 0.3s, height 0.3s;
   background-color: #03c988;
   border-color: #03c988;
 }
+.customCheckbox .checkboxIcon {
+  margin: auto;
+  width: 24px;
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  height: 24px;
+  stroke: #03c988;
+  transition: fill 0.3s;
+}
+.customCheckbox .checkboxInput:checked ~ .checkboxIcon {
+  stroke: white;
+}
 
 .dates {
+  margin-top: 20px;
+  color: #03c988;
+  font-weight: 600;
   align-items: center;
   display: flex;
   justify-content: space-between;
+}
+
+.bar {
+  width: 5px;
+  border-radius: 20px;
+  background-color: #03c988;
+  height: 100%;
+}
+
+.check {
+  width: 30%;
+  display: flex;
+}
+
+.containerTodo {
+  display: flex;
+  flex-direction: column;
 }
 
 .todos {
@@ -116,10 +157,9 @@ button {
 .todos .todo {
   background-color: white;
   position: relative;
-  height: 200px;
-  border-radius: 20px;
+  height: 160px;
+  border-radius: 10px;
   display: flex;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header {

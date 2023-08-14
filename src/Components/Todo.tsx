@@ -2,6 +2,7 @@ import { TodoId, type Todo as TodoType } from "../types";
 import styles from "../styles/components/_todo.module.scss";
 import ElipsisIcon from "../assets/icons/EllipsisIcon";
 import Dropdown from "./Dropdown";
+import Check from "../assets/icons/Check";
 
 interface Props extends TodoType {
   handleRemove: ({ id }: TodoId) => void;
@@ -12,15 +13,10 @@ interface Props extends TodoType {
 }
 
 const options = [
-  { value: "option1", label: "Opción 1" },
-  { value: "option2", label: "Opción 2" },
-  { value: "option3", label: "Opción 3" },
+  { value: "Eliminar", label: "Eliminar" },
+  { value: "Completar", label: "Completar" },
+  { value: "Editar", label: "Editar" },
 ];
-
-const handleOptionSelect = (selectedValue: string) => {
-  console.log(`Seleccionaste: ${selectedValue}`);
-};
-
 export const Todo: React.FC<Props> = ({
   id,
   title,
@@ -30,20 +26,43 @@ export const Todo: React.FC<Props> = ({
   completedTodo,
 }) => {
   const todoClasses = `${styles.todo} ${completed ? styles.completedTodo : ""}`;
-
+  const handleOptionSelect = (selectedValue: string) => {
+    switch (selectedValue) {
+      case "Eliminar":
+        handleRemove({ id });
+        break;
+      case "Completar":
+        completedTodo({ id, completed: !completed });
+        break;
+      case "Editar":
+        console.log("Selected Option 3");
+        break;
+      default:
+        break;
+    }
+  };
   return (
     <div className={todoClasses}>
-      <label htmlFor="">{title}</label>
-      <div className={styles.dates}>
-        <p>{date}</p>
-        <input
-          type="checkbox"
-          className={styles.customCheckbox}
-          checked={completed}
-          onChange={(event) => {
-            completedTodo({ id, completed: event.target.checked });
-          }}
-        />
+      <div className={styles.check}>
+        <div className={styles.bar}></div>
+        <label className={styles.customCheckbox}>
+          <input
+            type="checkbox"
+            className={styles.checkboxInput}
+            checked={completed}
+            onChange={(event) => {
+              completedTodo({ id, completed: event.target.checked });
+            }}
+          />
+          <Check />
+        </label>
+      </div>
+      <div className={styles.containerTodo}>
+        <label htmlFor="">{title}</label>
+        <h2>Jhon Doe from TechX compañy...</h2>
+        <div className={styles.dates}>
+          <p>{date}</p>
+        </div>
       </div>
 
       {/* <button
@@ -55,7 +74,7 @@ export const Todo: React.FC<Props> = ({
         <ElipsisIcon />
       </button> */}
 
-      <Dropdown options={options} onSelect={handleOptionSelect} />
+      {/* <Dropdown options={options} onSelect={handleOptionSelect} /> */}
     </div>
   );
 };
