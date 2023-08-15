@@ -34,8 +34,7 @@
 }
 .customCheckbox {
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
+  height: fit-content;
   justify-content: center;
   position: relative;
 
@@ -90,10 +89,12 @@
   height: 100%;
 }
 .check {
-  width: 30%;
+  margin-right: 20px;
+  width: fit-content;
   display: flex;
 }
 .containerTodo {
+  margin-right: 15px;
   display: flex;
   flex-direction: column;
 }

@@ -45,17 +45,6 @@ export const Todo: React.FC<Props> = ({
     <div className={todoClasses}>
       <div className={styles.check}>
         <div className={styles.bar}></div>
-        <label className={styles.customCheckbox}>
-          <input
-            type="checkbox"
-            className={styles.checkboxInput}
-            checked={completed}
-            onChange={(event) => {
-              completedTodo({ id, completed: event.target.checked });
-            }}
-          />
-          <Check />
-        </label>
       </div>
       <div className={styles.containerTodo}>
         <label htmlFor="">{title}</label>
@@ -64,6 +53,17 @@ export const Todo: React.FC<Props> = ({
           <p>{date}</p>
         </div>
       </div>
+      <label className={styles.customCheckbox}>
+        <input
+          type="checkbox"
+          className={styles.checkboxInput}
+          checked={completed}
+          onChange={(event) => {
+            completedTodo({ id, completed: event.target.checked });
+          }}
+        />
+        <Check />
+      </label>
 
       {/* <button
         className="destroy"
