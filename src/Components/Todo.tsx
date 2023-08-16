@@ -74,7 +74,7 @@ export const Todo: React.FC<Props> = ({
         <ElipsisIcon />
       </button> */}
 
-      {/* <Dropdown options={options} onSelect={handleOptionSelect} /> */}
+      <Dropdown options={options} onSelect={handleOptionSelect} />
     </div>
   );
 };

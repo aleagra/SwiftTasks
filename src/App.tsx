@@ -74,7 +74,7 @@ const App: React.FC = () => {
   const currentDate = new Date().toLocaleDateString();
   const currentTime = new Date().toLocaleTimeString();
 
-  const combinedDateTime = currentDate + " " + currentTime;
+  const combinedDateTime = currentDate + " ";
   const handleSave = async (title: string): Promise<void> => {
     const newTodo = {
       id: crypto.randomUUID(),
@@ -93,7 +93,7 @@ const App: React.FC = () => {
       {isLoading ? (
         <div className={styles.loading}>
           <img src="./tasks.png" alt="" />
-        </div> // Indicador de carga mientras isLoading es true
+        </div>
       ) : (
         <>
           <Header saveTodo={handleSave} />
